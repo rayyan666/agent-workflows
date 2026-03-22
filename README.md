@@ -2,6 +2,8 @@
 
 A progression of five AI agent projects built with LangChain, LlamaIndex, and CrewAI — from a single tool-calling agent to a multi-framework pipeline that combines all three. Each project is self-contained and introduces one new layer of complexity. All projects use Groq's free API tier and require no paid OpenAI access.
 
+![Workflow](C:\Users\APPSQUADZ\Documents\rayyan\agent-workflows\mermaid-diagram-2026-03-22-190329.png)
+
 ## Projects
 
 | File | Framework | Concept |
