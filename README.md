@@ -4,8 +4,7 @@ A progression of five AI agent projects built with LangChain, LlamaIndex, and Cr
 
 ## Workflow Architecture
 
-<img src="mermaid-diagram-2026-03-22-190329.png" alt="Workflow" width="600" />
-<img src="mermaid-diagram-2026-03-22-190157.png" alt="Workflow" width="600" />
+<img src="mermaid-diagram-2026-03-22-190157.png" alt="Workflow" width="800" />
 
 
 ## Projects
@@ -60,6 +59,10 @@ agent-workflows/
 │   └── csv/
 └── output/            (auto-created, stores generated reports)
 ```
+
+## Project codebase Architecture
+
+<img src="mermaid-diagram-2026-03-22-190329.png" alt="Workflow" width="800" />
 
 ## Groq rate limits
 
