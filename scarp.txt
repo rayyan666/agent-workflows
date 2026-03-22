@@ -1,0 +1,29 @@
+pip install llama-index-core llama-index-llms-groq llama-index-embeddings-huggingface llama-index-readers-file llama-index-readers-web beautifulsoup4 pandas pypdf
+
+
+```
+
+---
+
+## What each concept teaches you
+
+**`Settings`** is LlamaIndex's global config object. Set the LLM and embeddings once here — every index and query engine you create after will use them automatically.
+
+**`SentenceSplitter`** controls how your documents are broken into chunks before indexing. `chunk_size=512` means each chunk is ~512 tokens; `chunk_overlap=50` ensures sentences at the boundary of two chunks aren't lost. This is one of the biggest levers for RAG quality.
+
+**`VectorStoreIndex`** embeds each chunk and stores it in an in-memory vector store. When you query, it finds the `top_k` most semantically similar chunks and sends them to the LLM as context.
+
+**`RouterQueryEngine`** is the key new concept vs LangChain. Instead of one big index, you give it multiple query engines and it uses the LLM to read the tool descriptions and pick the right one for each question. This is how you scale to many data sources cleanly.
+
+**`source_nodes`** on the response gives you citations — which exact chunks were retrieved and their relevance scores. This is how you build trustworthy RAG apps.
+
+---
+
+## Project structure
+```
+project/
+├── multi_doc_research.py
+└── data/
+    ├── paper1.pdf
+    ├── paper2.pdf
+    └── research_data.csv
